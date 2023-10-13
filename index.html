@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Laura Roots</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Laura Roots</h1>
+    <h2>Web Dev Concepts</h2>
+    <!-- 1. Explain what index means as it relates to websites and servers. -->
+    <p>This file is named <code>index.html</code>, and it is the <strong>designated homepage</strong> of the <code>/~rootsl/a1-rootsl/</code> directory located on the OSU Engineering
+    web server. When a web browser sends a Hypertext Transfer Protocol (<strong>HTTP</strong>) request for the directory, the <strong>Apache</strong> web server, the software used by OSU Engineering, maps the request to this file. 
+    The majority of web servers are configured to search for an <code>index.html</code> file whenever they receive a request for <code>/</code>, the <strong>root directory</strong>. On 
+    some web servers, other file names are accepted as homepages. For example, Microsoft web servers will also look for <code>default.html</code> files.</p>
+    <!-- 2. Explain what can be seen in the browser's Web Dev/Inspector Network tab output screen. What is different about the file's details when viewed from the web server versus the local computer? -->
+    <p>The Inspection tools in web browsers such as Firefox and Google Chrome allow users to view requests and responses between the <strong>web client</strong> and different servers. The network information
+    can differ based on which <strong>protocol</strong> is used. When viewing the local file version of this webpage, the network information will show three resources: <code>index.html</code>, <code>main.css</code>, and <code>main.js</code>. 
+    The general network information for the <code>index.html</code> file shows the Universal Resource Locator (<strong>URL</strong>), request method, status code, and referrer policy. It shows limited response and request headers as well.
+    When the same file is accessed through a web server, the network information is quite different. An additional <code>favicon.ico</code> file is shown. The general tab includes
+    a remote Internet Protocol (<strong>IP</strong>) address of where the server is located. The request and response headers are more detailed, showing information on the server, the user-agent, and time and date signatures.</p>
+    <!-- 3. Explain why the favicon.ico file has a status 200, but the main.css and main.js files do not. -->
+    <p>When viewing the network tab for the file hosted on the OSU Engineering web server, four main resources are listed with different status codes. The <code>index.html</code> file and <code>favicon.ico</code> files
+    have 200 status codes, meaning the files were found and retrieved successfully. The <code>main.css</code> and <code>main.jss</code> files are listed with 404 status codes, meaning the files were not found. The only file located
+    in the <code>/~rootsl/a1-rootsl/</code> directory was <code>index.html</code>. The <code>main.css</code> and <code>main.jss</code> files are linked in the <code>index.html</code> file, but not provided or located on the web server.
+    Upon inspection, the URL for the <code>favicon.ico</code> file is located inside the root directory of the <code>web.engr.oregonstate.edu</code> server. It is a file provided by the parent directory, therefore it has a success status code.</p>
+    <!-- 4. Explain the parts of the URL to your web file. What is the scheme, the subdomain, the host domain, and the resource. -->
+    <p>The URL of this webpage can be broken into four main components: the scheme, the subdomain, the host domain, and the resource. The <strong>scheme</strong> in this case is <code>https</code>, which means the web browser used a Secure HTTP
+    protocol to access the requested resource. The <strong>subdomains</strong> are <code>web</code> and <code>engr</code>. These identify what part of the server the request should be sent to. The <strong>host domain</strong> or <strong>server name</strong>
+    is <code>oregonstate.edu</code>. The server name identifies which machine, or server, the resource is hosted in. The Domain Name System (<strong>DNS</strong>) maps the server name to a machine-understandable IP address. Finally, the <strong>path to resource</strong>
+    is <code>/~rootsl/a1-rootsl/</code>. This identifies where the server should look to find the resource.</p>
+</body>
+</html>
